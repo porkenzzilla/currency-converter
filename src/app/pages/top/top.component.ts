@@ -32,7 +32,7 @@ export class TopComponent implements OnInit{
      this._ch.detectChanges();
    })
  }
-  showMoreTokens(): void {
+  showMore(): void {
     if (this.buttonText === BUTTON_STATE.normal) {
       this.limit = this.dataLength;
       this.buttonText = BUTTON_STATE.expanded;
