@@ -1,16 +1,27 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TopComponent } from './pages/top/top.component';
+import {HttpClientModule} from "@angular/common/http";
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {AppRoutingModule} from "./app-routing.module";
+import {SharedModule} from "./shared/shared.module";
+import { ConverterComponent } from './pages/converter/converter.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TopComponent,
+    ConverterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    AppRoutingModule,
+    SharedModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

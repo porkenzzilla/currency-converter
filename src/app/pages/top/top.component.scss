@@ -1,0 +1,59 @@
+table {
+  font-size: 14px;
+  width: 50%;
+  border-collapse: collapse;
+  text-align: left;
+  margin: auto;
+}
+
+.caption {
+  word-spacing: 5px;
+  color: black;
+  text-align: center;
+  font-size: 35px;
+  padding-bottom: 30px;
+  font-weight: bold;
+}
+th {
+  font-size: 15px;
+  font-weight: normal;
+  color: black;
+  border-bottom: 2px solid #6678b1;
+  padding: 10px 8px;
+}
+td {
+  color: black;
+  border-bottom: 1px solid #ccc;
+  padding: 9px 8px;
+}
+tr:hover td {
+  color: rgb(0, 163, 0);
+}
+
+.token-button {
+  background-color: white;
+  color: black;
+  text-align: center;
+  font-size: 15px;
+}
+.token-button:hover {
+  color:rgb(2, 255, 36);
+}
+
+.table-tr{
+  padding-top: 30px;
+}
+.table-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  .token-button {
+    background-color: white;
+    color: rgb(0, 163, 0);
+    text-align: center;
+    font-size: 15px;
+    border: 0;
+    cursor: pointer;
+  }
+}

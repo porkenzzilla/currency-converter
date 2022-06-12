@@ -1,0 +1,18 @@
+<div class="container" [formGroup]="converterForm">
+  <div class="input-select">
+    <input type="number" formControlName="baseValue">
+    <select formControlName="baseName">
+      <option *ngFor="let item of currenciesList" [value]="item">{{ item }}</option>
+    </select>
+  </div>
+  <button class="btn" (click)="this.swapSide()">
+    &#8644;
+  </button>
+  <div class="input-select">
+    <input type="number" formControlName="targetValue">
+    <select formControlName="targetName">
+      <option *ngFor="let item of currenciesList" [value]="item">{{ item }}</option>
+    </select>
+  </div>
+</div>
+

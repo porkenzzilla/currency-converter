@@ -1,0 +1,79 @@
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+// Styles for menu
+
+nav {
+  position: sticky;
+  margin-right: 0;
+  top: 0;
+  margin-bottom: 20px;
+  background-color: rgba($color: #FF0000, $alpha: 0.5);
+}
+.navbar {
+  margin: 0;
+  list-style-type: none;
+  height: 30px;
+  padding: 0 0 0 25px;
+  min-width: 470px;
+  li {
+    float: left;
+    height: 100%;
+    height: auto;
+    a {
+      display: block;
+      padding: 6px;
+      width: 100px;
+      color: #fff;
+      text-decoration: none;
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+}
+.navbar ul li { float: none; }
+li:hover {
+  background-color: rgba($color: #666, $alpha: 1.0)
+}
+
+#burger, [for=burger]{
+  display: none;
+}
+
+// for mobile
+@media screen and (max-width: 768px) {
+  nav {
+    background-color: transparent;
+  }
+  [for=burger] {
+    display: block;
+    font-size: 6vw;
+    color: white;
+    background-color: rgba($color: #666, $alpha: 0.5);
+  }
+  [for=burger]::before {
+    content: "\2630";
+  }
+  .navbar {
+    display: none;
+  }
+  #burger:checked + label + .navbar {
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar li {
+    width: 25%;
+    background-color: rgba($color: #666, $alpha: 0.5)
+  }
+  .navbar li:hover {
+    background-color: rgba($color: #666, $alpha: 1.0)
+  }
+  #burger:checked + [for=burger]::before {
+    content: "✕";
+    font-size: 5vw;
+    padding-left: 1vw;
+  }
+}
